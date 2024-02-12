@@ -36,44 +36,44 @@ class Rectangle(Base):
         return self.__y
 
     @width.setter
-    def width(self, width):
+    def width(self, value):
         """Sets the value of width"""
         if (type(width) is not int):
             raise TypeError("Width must be an integer")
-        if width < 0:
-            raise ValueError("Width must be greater than 0")
+        if width <= 0:
+            raise ValueError("Width must be > 0")
 
-        self.__width = width
+        self.__width = value
 
     @height.setter
-    def height(self, height):
+    def height(self, value):
         """Sets the value of height"""
         if (type(height) is not int):
             raise TypeError("Height must be an integer")
         if height <= 0:
-            raise ValueError("Height must be greater than 0")
+            raise ValueError("Height must be > 0")
 
-        self.__height = height
+        self.__height = value
 
     @x.setter
-    def x(self, x):
+    def x(self, value):
         """Sets the value of x"""
         if (type(x) is not int):
             raise TypeError("x must be an integer")
         if x < 0:
-            raise ValueError("x must be greater than 0")
+            raise ValueError("x must be >= 0")
 
-        self.__x = x
+        self.__x = value
 
     @y.setter
-    def y(self, y):
+    def y(self, value):
         """Sets the value of y"""
         if (type(y) is not int):
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
 
-        self.__y = y
+        self.__y = value
 
     def area(self):
         """Calculates area of rectangle"""
