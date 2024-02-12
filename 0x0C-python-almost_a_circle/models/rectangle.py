@@ -89,3 +89,8 @@ class Rectangle(Base):
             for column in range(self.__width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """Returns an informal string representation"""
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
+{self.__width}/{self.__height}"
