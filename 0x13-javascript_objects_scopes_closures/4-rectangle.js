@@ -22,26 +22,12 @@ class Rectangle {
     double() {
         this.width = this.width * 2;
         this.height = this.height * 2;
-        for (let i = 0; i < this.height; i++) {
-            let row = "";
-            for (let j = 0; j < this.width; j++) {
-                row += 'X';
-            }
-            console.log(row)
-        }
     }
     rotate() {
         let temp;
         temp = this.height;
         this.height = this.width;
         this.width = temp;
-        for (let i = 0; i < this.height; i++) {
-            let row = "";
-            for (let j = 0; j < this.width; j++) {
-                row += 'X';
-            }
-            console.log(row);
-        }
     }
 }
 module.exports = Rectangle;
