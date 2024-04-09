@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 const PreviousSquare = require('./5-square');
 
 class Square extends PreviousSquare {
@@ -10,12 +11,10 @@ class Square extends PreviousSquare {
     if (c === undefined) {
       this.print();
     } else {
-      for (let i = 0; i < this.height; i++) {
-        let row = '';
-        for (let j = 0; j < this.width; j++) {
-          row += 'C';
+      if (this.width && this.height) {
+        for (let i = 0; i < this.height; i++) {
+          console.log(`${c.repeat(this.width)}`);
         }
-        console.log(row);
       }
     }
   }
